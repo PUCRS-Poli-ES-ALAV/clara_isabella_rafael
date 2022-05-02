@@ -36,19 +36,19 @@ def _3(pos: int):
     return _3(pos - 1) + _3(pos - 2)
 
 
-def _4(maior, menor):
+def _4(k: int, j: int) -> int:
     """
     Modele e implemente um método recursivo que calcule o somatório dos números inteiros entre os números k e j, passados como parâmetro.
     """
-    if maior < menor:
+    if k < j:
         raise Exception("error")
-    if menor == maior - 1:
+    if j == k - 1:
         return 0
-    return _4(menor, maior - 1) + (maior - 1)
+    return _4(j, k - 1) + (k - 1)
 
 
-def _5(s):
-    """
+def _5(s: str) -> bool:
+    """ 
     Modele e implemente um método recursivo que recebe um String em retorna true se este String for um palíndrome, false caso contrário.
     """
     if len(s) == 0:
